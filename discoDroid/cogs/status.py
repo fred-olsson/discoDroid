@@ -14,7 +14,7 @@ class Status(commands.Cog):
     @commands.command()
     async def ping(self, ctx):
         await ctx.send(f'Pong! {round(self.bot.latency * 1000)}ms')
-        self.log.info(f'Ponged')
+        self.log.info(f'Ponged {ctx.author}')
     
 def setup(bot):
     bot.add_cog(Status(bot))
