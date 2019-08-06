@@ -1,2 +1,2 @@
-#discoDroid
-###discord bot written in python
+# discoDroid
+### discord bot written in python
