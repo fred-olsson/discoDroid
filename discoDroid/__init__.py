@@ -1,15 +1,10 @@
 #!/usr/bin/env python3
 import os
-import json
 import logging
 import logging.config
+from discoDroid.constants import CONFIG, LOG_DIR, LOG_FILE
 
-#  Setup logging
-with open('config.json', 'r') as f:
-    CONFIG = json.load(f)
-
-LOG_FILE = CONFIG['logging']['handlers']['file_handler']['filename'][1:]
-LOG_DIR = '/' + LOG_FILE.split('/')[1]
+# Setup logging, files and directories 
 
 if not os.path.exists(os.getcwd() + LOG_DIR):
     os.mkdir(os.getcwd() + LOG_DIR)

@@ -1,13 +1,11 @@
 #!/usr/bin/env python3
 import os
-import json
 import logging
 import discord
 from discord.ext import commands
+from discoDroid.constants import CONFIG
 
 # Load bot and cogs.
-with open('config.json', mode='r') as f:
-    CONFIG = json.load(f) 
 
 bot = commands.Bot(command_prefix=CONFIG['discord']['prefix'])
 log = logging.getLogger(__name__)
