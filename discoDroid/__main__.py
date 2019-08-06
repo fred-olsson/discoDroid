@@ -15,12 +15,6 @@ for cog in os.listdir('./discoDroid/cogs'):
         bot.load_extension(f'discoDroid.cogs.{cog[:-3]}')
         log.info(f'Loaded cog: {cog}')
 
-@bot.command()
-async def ping(ctx):
-    log = logging.getLogger(__name__)
-    await ctx.send(f'Pong! {round(bot.latency * 1000)}ms')
-    log.info('Ponged!')
-
 @bot.event
 async def on_ready():    
     log.info('discoDroid lives!')
