@@ -2,9 +2,11 @@
 import os
 from os.path import dirname, abspath
 import json
-import discord
 import logging
+import discord
 from discord.ext import commands
+
+#TODO: TEST if can reach config file directly kthx.
 
 CONFIG_PATH = dirname(dirname(abspath(__file__))) + '/config.json'
 

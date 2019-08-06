@@ -1,1 +1,2 @@
-#börje the bot
+#discoDroid
+###discord bot written in python
