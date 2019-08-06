@@ -1,4 +1,4 @@
 __pycache__/
-/discoDroid/logs/
+logs/
 config.json
 *.pyc
