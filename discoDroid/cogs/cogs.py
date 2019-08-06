@@ -2,7 +2,7 @@
 import logging
 import discord
 from discord.ext import commands
-from discoDroid.constants import is_dev
+from discoDroid.checker import is_dev
 
 # Cog handler
 
