@@ -4,7 +4,7 @@ import json
 import logging
 import logging.config
 
-#  Set up logging
+#  Setup logging
 with open('config.json', 'r') as f:
     CONFIG = json.load(f)
 
