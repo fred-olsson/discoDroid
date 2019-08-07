@@ -6,6 +6,7 @@ from discord.ext import commands
 from discoDroid.checker import is_master
 
 # User handling cog
+#TODO: Add remove user, add remove roles?
 
 class Users(commands.Cog):
 
