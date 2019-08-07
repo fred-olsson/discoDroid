@@ -5,8 +5,7 @@ import json
 # Permission checks.
 
 def is_dev(ctx):
-    log = logging.getLogger(__name__)
-    
+    log = logging.getLogger(__name__)   
     with open('users.json', 'r') as f:
         users = json.load(f)
     
@@ -17,11 +16,9 @@ def is_dev(ctx):
     log.info('Dev denied.')
 
 def is_master(ctx):
-    log = logging.getLogger(__name__)
-    
     if is_dev(ctx):
         return True
-    
+    log = logging.getLogger(__name__)
     with open('users.json', 'r') as f:
         users = json.load(f)
     
@@ -32,14 +29,11 @@ def is_master(ctx):
     log.info('Master denied.')
 
 def is_assistant(ctx):
-    log = logging.getLogger(__name__)
-    
     if is_dev(ctx):
-         return True
-    
+         return True    
     if is_master(ctx):
          return True
-    
+    log = logging.getLogger(__name__)
     with open('users.json', 'r') as f:
         users = json.load(f)
     
