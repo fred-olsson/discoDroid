@@ -15,8 +15,4 @@ for cog in os.listdir('./discoDroid/cogs'):
         bot.load_extension(f'discoDroid.cogs.{cog[:-3]}')
         log.info(f'Loaded cog: {cog}')
 
-@bot.event
-async def on_ready():    
-    log.info('discoDroid lives!')
-
 bot.run(CONFIG['discord']['token'])
