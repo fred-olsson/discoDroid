@@ -11,9 +11,9 @@ def is_dev(ctx):
     
     for user in users['devs']:
         if ctx.author.id == user:
-            log.info('Dev verified.')
+            log.info(f'{ctx.author} verified as Dev.')
             return True
-    log.info('Dev denied.')
+    log.info(f'{ctx.author} denied Dev access.')
 
 def is_master(ctx):
     if is_dev(ctx):
@@ -24,9 +24,9 @@ def is_master(ctx):
     
     for user in users['masters']:
         if ctx.author.id == user:
-            log.info('Master verified.')
+            log.info(f'{ctx.author} verified as Master.')
             return True
-    log.info('Master denied.')
+    log.info(f'{ctx.author} denied Master access.')
 
 def is_assistant(ctx):
     if is_dev(ctx):
@@ -39,6 +39,6 @@ def is_assistant(ctx):
     
     for user in users['assistants']:
         if ctx.author.id == user:
-            log.info('Assistant verified.')
+            log.info(f'{ctx.author} verified as Assistant.')
             return True
-    log.info('Assistant denied.')
+    log.info(f'{ctx.author} denied Assistant access.')
