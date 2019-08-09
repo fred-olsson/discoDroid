@@ -15,6 +15,11 @@ class Status(commands.Cog):
     async def on_ready(self):
         self.log.info('discoDroid lives!')
 
+    @commands.Cog.listener()
+    async def on_command_error(self, ctx, error):
+        if isinstance(error, commands.CommandNotFound):
+            
+
     @commands.command()
     async def ping(self, ctx):
         await ctx.send(f'Pong! {round(self.bot.latency * 1000)}ms')
